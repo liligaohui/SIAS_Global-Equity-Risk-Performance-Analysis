@@ -77,7 +77,7 @@ Feel free to submit pull requests or open issues for:
 
 ## Author & Contact
 
-**Lili Gao**
+**Lili Gao**\
 Risk and Compliance Portfolio Manager\
 Student Investment Advisory Service (SIAS) — SFU\
 2024 Cohort\
