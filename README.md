@@ -1,6 +1,89 @@
-# SIAS_Global-Equity-Risk-Performance-Analysis
+# SIAS Global Equity Risk & Performance Analysis
 
-**Objective:**
-This code enables the SIAS risk team to generate the latest risk metrics without accessing the Bloomberg terminal. All metrics provided serve as reference; to ensure they meet IPS requirements, please verify the most up-to-date figures against the data in the Bloomberg terminal.
+## Overview  
+This repository contains a Python-based toolkit that empowers the SIAS Risk Team to compute a comprehensive suite of portfolio risk and performance metrics—without requiring direct access to the Bloomberg terminal. By simply pointing to the latest holdings files, you can reproduce volatility, drawdowns, Value-at-Risk, information ratios, and other key statistics for both the SIAS portfolio and its benchmark (iShares MSCI ACWI ETF).
 
-All of the code can be run immediately by updating the file names to point to the latest SIAS portfolio asset-holding Excel file received from BNY Mellon, as well as the most recent benchmark holdings and weights downloaded from the iShares website (Benchmark: iShares MSCI ACWI ETF；web link: https://www.ishares.com/us/products/239600/ishares-msci-acwi-etf).
+## Features  
+- **End-to-End Calculation** of standard risk metrics: volatility, Sharpe, Sortino, max drawdown, VaR (95%), ES (95%), beta, tracking error, information ratio, and more.  
+- **Automated Data Ingestion:** Reads the most recent SIAS asset-holding Excel from BNY Mellon and benchmark holdings/weights from the iShares website.  
+- **Interactive Analysis:** Provides IPython widgets for on-the-fly parameter selection and chart customization.  
+- **Configurable Periodicity:** Supports daily, monthly, or custom reporting windows.  
+- **Benchmark Validation:** Includes a built-in check to compare outputs against Bloomberg terminal results (to satisfy IPS accuracy requirements).  
+- **Modular & Extensible:** Easy to add new metrics, alternative benchmarks, or custom universe definitions.
+
+## Prerequisites  
+1. **Python 3.8+**  
+2. Core libraries:  
+   - `pandas`  
+   - `numpy`  
+   - `scipy`
+   - `statsmodels`
+   - 'yahoo'
+   - `pandas_datareader`  
+   - `matplotlib` (for optional plotting)  
+3. Interactive widgets:  
+   - `ipywidgets`  
+
+## Data Inputs
+
+1. **SIAS Portfolio Holdings**
+
+   * File format: `.xlsx` 
+   * Source: BNY Mellon (latest file) by sfu email
+         
+2. **Benchmark Holdings & Weights**
+
+   * File format: `.xlsx` or `.csv`
+   * Source: iShares MSCI ACWI ETF ([product page](https://www.ishares.com/us/products/239600/ishares-msci-acwi-etf))
+
+## Usage
+
+1. **Clone or download** this repo.
+2. **Open** the main analysis script (e.g., `risk_performance_analysis.py`) in your IDE, Jupyter, or Colab.
+3. **Configure** the file paths at the top of the script:
+
+   ```python
+   SIAS_FILE       = "SIAS Asset Detail_dd mm yyyy.xlsx"
+   BENCH_FILE      = "ACWI_holdings_dd mm yyyy.csv"
+   ```
+4. **Launch** the notebook or script.
+
+   * The script will load and align portfolio vs. benchmark returns.
+   * Interactive widgets allow you to adjust the analysis window and chart settings.
+   * Generates a summary table and optional plots.
+    
+5. **Export** results (optional):
+
+   * CSV: `outputs/risk_metrics_<date>.csv`
+   * PDF/PNG charts: `outputs/plot_<metric>_<date>.png`
+
+## Verification & Quality Control
+
+* **Bloomberg Cross-Check:** Run equivalent Bloomberg functions (e.g., `RV`, `RL`) for a spot check.
+* **Versioning:** Tag scripts and data files with a date stamp (e.g., `2025-07-31`) to ensure reproducibility.
+
+## Notebooks & Colab
+
+Interactive implementation available on Google Colab:
+[Open in Colab »](https://colab.research.google.com/drive/1l0Hvb7rZ-ynC90jzbVvXclNnZDeoaw8E?usp=sharing)
+
+## Contributing
+
+Feel free to submit pull requests or open issues for:
+
+* New risk/attribution metrics
+* Alternative data sources (e.g., WRDS, FactSet)
+* Enhanced reporting templates
+
+## Author & Contact
+
+**Lili Gao**
+Risk and Compliance Portfolio Manager\
+Student Investment Advisory Service (SIAS) — SFU\
+2024 Cohort\
+✉️ [hga87@sfu.ca](mailto:hga87@sfu.ca)
+
+*Last Updated: July 31, 2025*
+
+```
+```
