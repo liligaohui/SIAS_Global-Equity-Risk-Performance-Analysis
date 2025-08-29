@@ -4,12 +4,12 @@
 This repository contains a Python-based toolkit that empowers the SIAS Risk Team to compute a comprehensive suite of portfolio risk and performance metrics—without requiring direct access to the Bloomberg terminal. By simply pointing to the latest holdings files, you can reproduce volatility, drawdowns, Value-at-Risk, information ratios, and other key statistics for both the SIAS portfolio and its benchmark (iShares MSCI ACWI ETF).
 
 ## Features  
-- **End-to-End Calculation** of standard risk metrics: volatility, Sharpe, Sortino, max drawdown, VaR (95%), ES (95%), beta, tracking error, information ratio, and more.  
-- **Automated Data Ingestion:** Reads the most recent SIAS asset-holding Excel from BNY Mellon and benchmark holdings/weights from the iShares website.  
-- **Interactive Analysis:** Provides IPython widgets for on-the-fly parameter selection and chart customization.  
-- **Configurable Periodicity:** Supports daily, monthly, or custom reporting windows.  
-- **Benchmark Validation:** Includes a built-in check to compare outputs against Bloomberg terminal results (to satisfy IPS accuracy requirements).  
-- **Modular & Extensible:** Easy to add new metrics, alternative benchmarks, or custom universe definitions.
+- **Comprehensive Risk Metrics**: Volatility, Sharpe, Sortino, max drawdown, Value-at-Risk (95%), Expected Shortfall (95%), beta, tracking error, information ratio, and more. 
+- **Automated Data Ingestion:** : Reads the most recent SIAS asset-holdings Excel (BNY Mellon) and benchmark weights from the iShares ACWI ETF.
+- **Interactive Analysis:**  IPython widgets enable on-the-fly sorting, filtering, and parameter selection directly in Jupyter/Colab.
+- **Flexible Reporting:** Supports multiple lookback windows (1m, 3m, 6m, 12m) and custom evaluation horizons.
+- **Benchmark Validation:** Built-in checks to compare against Bloomberg results for IPS accuracy and consistency.
+- **Modular & Extensible:** Easy to add new metrics, swap benchmarks, or extend to other asset classes.
 
 ## Prerequisites  
 1. **Python 3.8+**  
