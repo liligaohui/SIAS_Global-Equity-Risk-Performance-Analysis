@@ -50,12 +50,7 @@ This repository contains a Python-based toolkit that empowers the SIAS Risk Team
 
    * The script will load and align portfolio vs. benchmark returns.
    * Interactive widgets allow you to adjust the analysis window and chart settings.
-   * Generates a summary table and optional plots.
-    
-5. **Export** results (optional):
-
-   * CSV: `outputs/risk_metrics_<date>.csv`
-   * PDF/PNG charts: `outputs/plot_<metric>_<date>.png`
+   * Generates a summary table and optional plots.`
 
 ## Verification & Quality Control
 
