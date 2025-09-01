@@ -41,6 +41,16 @@ This repository provides a **Python-based toolkit** developed for the SIAS Risk 
    * Format: `.xlsx` or `.csv`
    * Source: iShares MSCI ACWI ETF ([product page](https://www.ishares.com/us/products/239600/ishares-msci-acwi-etf))
 
+### Data Access
+The dataset used in this project is not publicly available in this repository.  
+A copy is hosted on Google Drive. To obtain access:
+
+1. Visit the [Dataset Request Link](https://drive.google.com/drive/folders/14Qj5mYg8BhEvRLRt2MkeXgo4BZWTp-xB?usp=sharing).  
+2. Submit an access request using your Google account.  
+3. Access will be granted on a case-by-case basis for academic and research purposes.  
+
+Note: Without this dataset, the analysis code will run but produce empty outputs or require substitution with your own data.
+
 ## Usage
 
 1. **Clone or download** this repository.
