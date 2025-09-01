@@ -1,84 +1,95 @@
 # SIAS Global Equity Risk & Performance Analysis
 
-## Overview  
-This repository contains a Python-based toolkit that empowers the SIAS Risk Team to compute a comprehensive suite of portfolio risk and performance metrics—without requiring direct access to the Bloomberg terminal. By simply pointing to the latest holdings files, you can reproduce volatility, drawdowns, Value-at-Risk, information ratios, and other key statistics for both the SIAS portfolio and its benchmark (iShares MSCI ACWI ETF).
+## Overview
 
-## Features  
-- **Comprehensive Risk Metrics**: Volatility, Sharpe, Sortino, max drawdown, Value-at-Risk (95%), Expected Shortfall (95%), beta, tracking error, information ratio, and more. 
-- **Automated Data Ingestion:** : Reads the most recent SIAS asset-holdings Excel (BNY Mellon) and benchmark weights from the iShares ACWI ETF.
-- **Interactive Analysis:**  IPython widgets enable on-the-fly sorting, filtering, and parameter selection directly in Jupyter/Colab.
-- **Flexible Reporting:** Supports multiple lookback windows (1m, 3m, 6m, 12m) and custom evaluation horizons.
-- **Benchmark Validation:** Built-in checks to compare against Bloomberg results for IPS accuracy and consistency.
-- **Modular & Extensible:** Easy to add new metrics, swap benchmarks, or extend to other asset classes.
+This repository provides a **Python-based toolkit** developed for the SIAS Risk Team to calculate a comprehensive suite of portfolio risk and performance metrics—**without requiring direct Bloomberg access**. By pointing the toolkit to the latest holdings files, users can reproduce key statistics such as volatility, drawdowns, Value-at-Risk, and information ratios for both the SIAS portfolio and its benchmark (**iShares MSCI ACWI ETF**).
 
-## Prerequisites  
-1. **Python 3.8+**  
-2. Core libraries:  
-   - `pandas`  
-   - `numpy`  
-   - `scipy`
-   - `statsmodels`
-   - 'yahoo'
-   - `pandas_datareader`  
-   - `matplotlib` (for optional plotting)  
-3. Interactive widgets:  
-   - `ipywidgets`  
+## Features
+
+* **Comprehensive Risk Metrics**: Volatility, Sharpe ratio, Sortino ratio, maximum drawdown, Value-at-Risk (95%), Expected Shortfall (95%), beta, tracking error, information ratio, and more.
+* **Automated Data Ingestion**: Reads the most recent SIAS asset-holdings file (BNY Mellon) and benchmark weights (iShares MSCI ACWI ETF).
+* **Interactive Analysis**: Built-in IPython widgets allow for on-the-fly sorting, filtering, and parameter adjustments directly in Jupyter/Colab.
+* **Flexible Reporting**: Supports multiple lookback windows (1m, 3m, 6m, 12m) and custom evaluation horizons.
+* **Benchmark Validation**: Includes checks against Bloomberg outputs to ensure consistency with IPS requirements.
+* **Modular & Extensible**: Easy to extend with new metrics, swap benchmarks, or adapt for other asset classes.
+
+## Prerequisites
+
+1. **Python 3.8+**
+2. Core libraries:
+
+   * `pandas`
+   * `numpy`
+   * `scipy`
+   * `statsmodels`
+   * `yfinance`
+   * `pandas_datareader`
+   * `matplotlib` (for optional plots)
+3. Interactive widgets:
+
+   * `ipywidgets`
 
 ## Data Inputs
 
 1. **SIAS Portfolio Holdings**
 
-   * File format: `.xlsx` 
-   * Source: BNY Mellon (latest file) by sfu email
-         
+   * Format: `.xlsx`
+   * Source: BNY Mellon (latest file delivered via SFU email)
+
 2. **Benchmark Holdings & Weights**
 
-   * File format: `.xlsx` or `.csv`
+   * Format: `.xlsx` or `.csv`
    * Source: iShares MSCI ACWI ETF ([product page](https://www.ishares.com/us/products/239600/ishares-msci-acwi-etf))
 
 ## Usage
 
-1. **Clone or download** this repo.
-2. **Open** the main analysis script (e.g., `risk_performance_analysis.py`) in your IDE, Jupyter, or Colab.
+1. **Clone or download** this repository.
+
+2. **Open** the main analysis script (e.g., `risk_performance_analysis.py`) in Jupyter, Colab, or your preferred IDE.
+
 3. **Configure** the file paths at the top of the script:
 
    ```python
-   SIAS_FILE       = "SIAS Asset Detail_dd mm yyyy.xlsx"
-   BENCH_FILE      = "ACWI_holdings_dd mm yyyy.csv"
+   SIAS_FILE  = "yyyymmdd SIAS Asset Detail_dd mm yyyy.xlsx"
+   BENCH_FILE = "ACWI_holdings_dd mm yyyy.csv"
    ```
-4. **Launch** the notebook or script.
 
-   * The script will load and align portfolio vs. benchmark returns.
-   * Interactive widgets allow you to adjust the analysis window and chart settings.
-   * Generates a summary table and optional plots.`
+4. **Run** the notebook or script:
+
+   * The toolkit will load and align portfolio vs. benchmark returns.
+   * Interactive widgets allow dynamic selection of lookback windows and chart settings.
+   * Summary tables and optional plots will be generated automatically.
+
+## Assumptions & Limitations
+
+* **No look-through analysis**: Exposures are limited to directly held securities. Underlying fund or structured-product holdings are not decomposed.
+* **Historical basis**: All metrics are calculated from historical return data without forward-looking adjustments or scenario modeling.
+* **Static weights**: Portfolio weights are assumed to remain constant over the evaluation horizon (no rebalancing or trading effects are modeled).
+* **USD reporting**: All calculations are expressed in U.S. dollars (USD). Currency translation effects may apply for non-USD securities.
 
 ## Verification & Quality Control
 
-* **Bloomberg Cross-Check:** Run equivalent Bloomberg functions (e.g., `RV`, `RL`) for a spot check.
-* **Versioning:** Tag scripts and data files with a date stamp (e.g., `2025-07-31`) to ensure reproducibility.
+* **Bloomberg Cross-Check**: Results can be compared against Bloomberg functions (e.g., `RV`, `RL`) for validation.
+* **Versioning**: Tag scripts and input files with a date stamp (e.g., `2025-07-31`) to maintain reproducibility.
 
 ## Notebooks & Colab
 
-Interactive implementation available on Google Colab:
-[Open in Colab »](https://colab.research.google.com/drive/1l0Hvb7rZ-ynC90jzbVvXclNnZDeoaw8E?usp=sharing)
+An interactive version of the toolkit is available on Google Colab:
+[**Open in Colab »**](https://colab.research.google.com/drive/1l0Hvb7rZ-ynC90jzbVvXclNnZDeoaw8E?usp=sharing)
 
 ## Contributing
 
-Feel free to submit pull requests or open issues for:
+Contributions are welcome. Please open issues or submit pull requests for:
 
 * New risk/attribution metrics
-* Alternative data sources (e.g., WRDS, FactSet)
-* Enhanced reporting templates
+* Integration with alternative data sources (e.g., WRDS, FactSet)
+* Enhanced reporting and visualization templates
 
 ## Author & Contact
 
-**Lili, Hui Gao**\
-Risk and Compliance Portfolio Manager\
-Student Investment Advisory Service (SIAS) — SFU\
-2024 Cohort\
+**Lili Hui Gao**
+Risk and Compliance Portfolio Manager
+Student Investment Advisory Service (SIAS), SFU — 2024 Cohort
 ✉️ [hga87@sfu.ca](mailto:hga87@sfu.ca)
 
-*Last Updated: July 31, 2025*
-
-```
-```
+*Last updated: Sep 1, 2025*
