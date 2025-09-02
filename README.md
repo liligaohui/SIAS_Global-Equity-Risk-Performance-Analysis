@@ -90,9 +90,9 @@ An interactive version of the toolkit is available on Google Colab:
 
 ## Author & Contact
 
-**Lili Hui Gao**
-Risk and Compliance Portfolio Manager
-Student Investment Advisory Service (SIAS), SFU — 2024 Cohort
-✉️ [hga87@sfu.ca](mailto:hga87@sfu.ca)
+**Lili Hui Gao**\
+Risk and Compliance Portfolio Manager\
+Student Investment Advisory Service (SIAS), SFU — 2024 Cohort\
+✉️ [hga87@sfu.ca](mailto:hga87@sfu.ca)\
 
 *Last updated: Sep 1, 2025*
