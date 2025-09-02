@@ -87,13 +87,6 @@ Note: Without this dataset, the analysis code will run but produce empty outputs
 An interactive version of the toolkit is available on Google Colab:
 [**Open in Colab »**](https://colab.research.google.com/drive/1l0Hvb7rZ-ynC90jzbVvXclNnZDeoaw8E?usp=sharing)
 
-## Contributing
-
-Contributions are welcome. Please open issues or submit pull requests for:
-
-* New risk/attribution metrics
-* Integration with alternative data sources (e.g., WRDS, FactSet)
-* Enhanced reporting and visualization templates
 
 ## Author & Contact
 
