@@ -13,6 +13,11 @@ This repository provides a **Python-based toolkit** developed for the SIAS Risk 
 * **Benchmark Validation**: Includes checks against Bloomberg outputs to ensure consistency with IPS requirements.
 * **Modular & Extensible**: Easy to extend with new metrics, swap benchmarks, or adapt for other asset classes.
 
+## Notebooks & Colab
+
+An interactive version of the toolkit is available on Google Colab:
+[**Open in Colab »**](https://colab.research.google.com/drive/1l0Hvb7rZ-ynC90jzbVvXclNnZDeoaw8E?usp=sharing)
+
 ## Prerequisites
 
 1. **Python 3.8+**
@@ -81,11 +86,6 @@ Note: Without this dataset, the analysis code will run but produce empty outputs
 
 * **Bloomberg Cross-Check**: Results can be compared against Bloomberg functions (e.g., `RV`, `RL`) for validation.
 * **Versioning**: Tag scripts and input files with a date stamp (e.g., `2025-07-31`) to maintain reproducibility.
-
-## Notebooks & Colab
-
-An interactive version of the toolkit is available on Google Colab:
-[**Open in Colab »**](https://colab.research.google.com/drive/1l0Hvb7rZ-ynC90jzbVvXclNnZDeoaw8E?usp=sharing)
 
 
 ## Author & Contact
