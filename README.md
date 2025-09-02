@@ -39,7 +39,7 @@ This repository provides a **Python-based toolkit** developed for the SIAS Risk 
 2. **Benchmark Holdings & Weights**
 
    * Format: `.xlsx` or `.csv`
-   * Source: iShares MSCI ACWI ETF ([product page](https://www.ishares.com/us/products/239600/ishares-msci-acwi-etf))
+   * Source: iShares MSCI ACWI ETF ([Web Page](https://www.ishares.com/us/products/239600/ishares-msci-acwi-etf))
 
 ### Data Access
 The dataset used in this project is not publicly available in this repository.  
